@@ -1,0 +1,37 @@
+.alt-header {
+  padding: var(--horizontal-space);
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.alt-header__title {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.alt-header__column {
+  width: 33%;
+}
+.alt-header__column:first-child {
+  /* 90 css hack 오른쪽 마진 자동 정렬 */
+  margin-right: auto;
+}
+.alt-header__column:nth-child(2) {
+  text-align: center;
+}
+.alt-header__column:last-child {
+  /* 91 css hack 왼쪽 마진 자동 정렬 */
+  /* margin-left: auto; */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.alt-header__column span:last-child {
+  margin-left: 20px;
+}

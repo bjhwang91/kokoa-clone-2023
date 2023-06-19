@@ -1,0 +1,43 @@
+/* 11 classs는 .(dot)을 사용한다 */
+/* 25 status-bar.css 생성 */
+.status-bar {
+  /* 12 세 개의 status-bar__column을 한 줄로 놓는다 display: flex; */
+  display: flex;
+  /* 13 flex 축을 따라서 status-bar__column 위치 잡기 */
+  /* justify-content: space-between; */
+  /* 17 css hack을 이용해서 .status-bar__column 3등분 하기 */
+  justify-content: center;
+  /* 27 .status-bar의 padding 적용 */
+  padding: 5px 3px;
+  /* 56 status-bar top 0 fixed 적용 */
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* 18 모든 .status-bar__column width 주기 */
+.status-bar__column {
+  width: 33%;
+}
+
+/* 14 .status-bar__column:first-child span margin-right 5px */
+.status-bar__column:first-child span {
+  margin-right: 5px;
+}
+
+/* 19 2번째 .status-bar__column만 중앙으로 오게 하기 */
+.status-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+/* 20 3번째 .status-bar__column 우측으로 정렬하기 */
+.status-bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* 21 딱 붙은 아이콘에 마진 추가하기 */
+.status-bar__column .fa-battery-full {
+  margin: 0px 5px;
+}

@@ -1,0 +1,64 @@
+.screen-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--horizontal-space);
+  position: fixed;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.screen-header__title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.screen-header__icons span {
+  margin-left: 25px;
+}
+
+@keyframes rotateCog {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+/* 105 anmation: linear는 선형적으로 같은 반복 */
+.screen-header__icons .fa-cog:hover {
+  animation: rotateCog 1s linear infinite;
+}
+/* 81 position: absolute의 parents 설정 */
+.screen-header__icons {
+  position: relative;
+}
+
+/* 80 79번 position: absolute 적용 */
+.screen-header__icons-notification-none {
+  background-color: tomato;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 75px;
+  bottom: 20px;
+}
+
+/* 88 more.html dot 적용 */
+.screen-header__icons-notification-none-more {
+  background-color: tomato;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 120px;
+  bottom: 20px;
+}

@@ -1,0 +1,59 @@
+<!-- 1 대부분의 웹 서버는 default로 index.html을 찾게 되어있다 -->
+<!-- 2 ! 단축키를 통해서 html 기본 코드 불러오기가 가능하다 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 10 css/style.css 연결, 단축키 link:css -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 3 Welcome to KokoaTalk -->
+    <title>Welcome to Kokoa Clone</title>
+  </head>
+  <body>
+    <div class="status-bar">
+      <!-- 4 status-bar__column 3개 -->
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <!-- 6 font awesome 아이콘 넣기 -->
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>110%</span>
+        <!-- 22 아이콘 fa-lg large 사이즈로 키우기 -->
+        <i class="fas fa-battery-full fa-lg"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <!-- 7 header class="welcom-header" 작성 -->
+    <header class="welcome-header">
+      <h1 class="welcome-header__title">Welcome to Kokoa Clone</h1>
+      <p class="welcome-header__text">
+        If you have a Kokoa Account, log in with your email or phone number.
+      </p>
+    </header>
+
+    <!-- 8 form id="login-form" 작성 -->
+    <!-- 47 form action은 data를 friends.html로 보내줌, method post는 백엔드 서버에 정보를 전송, methold get은 url 형태로 정보 전송 -->
+    <form action="friends.html" method="get" id="login-form">
+      <input name="username" type="text" placeholder="Email or phone number" />
+      <input name="password" type="password" placeholder="Password" />
+      <input type="submit" value="Log In" />
+      <a href="#">Find Kokoa Account or Password</a>
+    </form>
+
+    <div id="no-mobile">
+      <span>Your screen is too big ㅠㅠ</span>
+    </div>
+
+    <!-- 5 script는 body가 끝나기 전에 있어야 한다 -->
+    <script
+      src="https://kit.fontawesome.com/8e93ebfe0f.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

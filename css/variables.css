@@ -1,0 +1,8 @@
+:root {
+  /* 37 해당 html 요소에 --yellow 색상 정의 */
+  --yellow: #fae100;
+  /* 72 세로축 여백 일괄 정의 */
+  --horizontal-space: 25px;
+  /* 84 border line 정의 */
+  --main-border: 1px solid rgba(0, 0, 0, 0.2);
+}

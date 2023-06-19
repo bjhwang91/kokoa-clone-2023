@@ -1,0 +1,61 @@
+#friends-display-link {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  background-color: #fafafa;
+  /* 67 status-bar, screen-header가 모두 fixed 되어 있기 때문에 padding-top을 통해서 fixed 위치로부터 멀어지게 하고 padding-bottom을 통해서 background-color 영역을 잡아줌 */
+  padding: 120px 0 15px 0;
+  font-size: 18px;
+}
+
+#friends-display-link i {
+  color: rgba(0, 0, 0, 0.3);
+  /* 69 아이콘 간격 조절 */
+  padding: 0 5px;
+}
+
+.friends-screen__channel {
+  margin-top: 25px;
+  border-top: var(--main-border);
+  padding-top: 15px;
+}
+
+.friends-screen__channel-header {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.friends-screen {
+  padding: 0px var(--horizontal-space);
+}
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    /* 102 animation forword를 통해 눈에서는 사라졌지만 여전히 animation이 존재하는 것으로 인지하기 visibility: hidden;으로 anmation이 끝난 후 숨겨준다 */
+    visibility: hidden;
+    /* 103 실제로 숨기기 위해서는 JS가 필요하다 */
+  }
+}
+
+#splash-screen {
+  background-color: var(--yellow);
+  /* 100 모든 화면의 refresh마다 최상위로 올라오므로 relative는 body */
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 132px;
+  /* 101 animation이 작동하고 나면 #splash-screen은 opacity: 0;을 기억하지 못하여 opacity: 1;로 돌아가기 때문에, 마지막 animation을 지정하여 알려주는 것이 forwards */
+  animation: hideSplashScreen 0.3s ease-in-out forwards;
+  animation-delay: 2s;
+}

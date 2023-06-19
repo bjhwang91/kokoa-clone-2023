@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+/* 24 reset.css 적용 */
+@import "reset.css";
+/* 38 variabels.css 적용 */
+/* 51 variables는 모든 css에 적용되야 하므로 상단에 있어야 한다 */
+@import "variables.css";
+/* 26 status-bar.css 적용 */
+/* 45 status-bar.css 폴더 이동 적용 */
+@import "components/status-bar.css";
+/* 50 nav-bar.css 적용 */
+@import "components/nav-bar.css";
+/* 64 screen-header.css 적용 */
+@import "components/screen-header.css";
+/* 71 user-component.css 적용 */
+@import "components/user-component.css";
+/* 75 badge.css 적용 */
+@import "components/badge.css";
+@import "components/icon-row.css";
+@import "components/alt-screen-header.css";
+@import "components/no-mobile.css";
+
+/* 46 login.css 적용 */
+@import "screens/login.css";
+/* 66 friends.css 적용 */
+@import "screens/friends.css";
+@import "screens/find.css";
+@import "screens/more.css";
+@import "screens/settings.css";
+@import "screens/chat.css";
+/* 9 style.css 적용을 위해 작성 */
+body {
+  /* 15 font-family만 쳐도 여러 옵션이 나온다, 폰트가 쓰여진 순서는 사용자가 가지고 있는 폰트 중에서 우선 순위를 정한다 */
+  /* 16 더 많은 폰트를 사용하기 위해서 google fonts를 이용하면 원하는 font를 서체 크기별 유형별로 담아서 embeded하면 된다 */
+  font-family: "Open Sans", sans-serif;
+  /* 55 nav-bar가 bottom 0에 fixed 되었는지 확인하기 위해 vh(view height)를 1000% 적용 */
+  height: 1000vh;
+  /* 68 기본 폰트 색상 설정 */
+  color: #2e363e;
+}
+
+.main-screen {
+  /* 73 status-bar, screen-header fixed 보정을 위한 padding top 값 */
+  padding: 120px var(--horizontal-space);
+}
+
+.main-screen a {
+  display: block;
+  margin-top: 5px;
+}
